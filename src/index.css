@@ -45,56 +45,56 @@
 /* ========= The Design tokens ========== */
 @theme { 
     /* Surface / Background */
-    --surface-primary: var(--nova-white);
-    --surface-secondary: var(--nova-gray-50);
-    --surface-card: var(--nova-white);
-    --surface-footer: var(--nova-gray-900);
-    --surface-hero-start: var(--nova-orange-500);
-    --surface-hero-end: var(--nova-orange-400);
-    --surface-hero: var(--nova-orange-gradient-1);
+    --color-surface-primary: var(--nova-white);
+    --color-surface-secondary: var(--nova-gray-50);
+    --color-surface-card: var(--nova-white);
+    --color-surface-footer: var(--nova-gray-900);
+    --color-surface-hero-start: var(--nova-orange-500);
+    --color-surface-hero-end: var(--nova-orange-400);
+    --color-surface-hero: var(--nova-orange-gradient-1);
 
     /* Text */
-    --text-primary: var(--nova-gray-950);
-    --text-secondary: var(--nova-gray-600);
-    --text-tertiary: var(--nova-gray-500);
-    --text-muted: var(--nova-gray-400);
-    --text-on-footer: var(--nova-white);
-    --text-on-hero: var(--nova-white);
-    --text-on-hero-sub: var(--nova-orange-50);
-    --text-placeholder: var(--nova-black-alpha-50);
-    --text-accent: var(--nova-orange-500);
+    --color-text-primary: var(--nova-gray-950);
+    --color-text-secondary: var(--nova-gray-600);
+    --color-text-tertiary: var(--nova-gray-500);
+    --color-text-muted: var(--nova-gray-400);
+    --color-text-on-footer: var(--nova-white);
+    --color-text-on-hero: var(--nova-white);
+    --color-text-on-hero-sub: var(--nova-orange-50);
+    --color-text-placeholder: var(--nova-black-alpha-50);
+    --color-text-accent: var(--nova-orange-500);
 
     /* Border */
-    --border-default: var(--nova-gray-300);
-    --border-card: var(--nova-gray-200);
-    --border-footer: var(--nova-gray-800);
+    --color-border-default: var(--nova-gray-300);
+    --color-border-card: var(--nova-gray-200);
+    --color-border-footer: var(--nova-gray-800);
 
     /* Button */
-    --button-primary-bg: var(--nova-orange-500);
-    --button-primary-text: var(--nova-white);
-    --button-ghost-text: var(--nova-orange-500);
+    --color-button-primary-bg: var(--nova-orange-500);
+    --color-button-primary-text: var(--nova-white);
+    --color-button-ghost-text: var(--nova-orange-500);
 
     /* Nav */
-    --nav-link: var(--nova-gray-600);
+    --color-nav-link: var(--nova-gray-600);
 
     /* Badges*/
-    --badge-beginner-bg: var(--nova-green-50);
-    --badge-beginner-text: var(--nova-green-800);
+    --color-badge-beginner-bg: var(--nova-green-50);
+    --color-badge-beginner-text: var(--nova-green-800);
 
-    --badge-intermediate-bg: var(--nova-blue-50);
-    --badge-intermediate-text: var(--nova-blue-700);
+    --color-badge-intermediate-bg: var(--nova-blue-50);
+    --color-badge-intermediate-text: var(--nova-blue-700);
 
 
-    --badge-advanced-bg: var(--nova-purple-50);
-    --badge-advanced-text: var(--nova-purple-700);
+    --color-badge-advanced-bg: var(--nova-purple-50);
+    --color-badge-advanced-text: var(--nova-purple-700);
 
     /* Category Label */
-    --category-text: var(--nova-orange-500);
+    --color-category-text: var(--nova-orange-500);
 
     /* Shadow */
-    --shadow-sm: 0px 1px 3px 0px var(--nova-black-alpha-10),
+    --color-shadow-sm: 0px 1px 3px 0px var(--nova-black-alpha-10),
         0px 1px 2px 0px var(--nova-black-alpha-10);
-    --shadow-md: 0px 4px 6px -1px var(--nova-black-alpha-10),
+    --color-shadow-md: 0px 4px 6px -1px var(--nova-black-alpha-10),
         0px 2px 4px -2px var(--nova-black-alpha-10);
 }
 
