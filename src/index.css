@@ -1,1 +1,101 @@
 @import 'tailwindcss';
+
+/* ========= Raw Primitiives ========== */
+:root { 
+    
+    /* Orange */
+    --nova-orange-500: #f54900;
+    --nova-orange-400: #ff6900;
+    --nova-orange-50: #ffedd4;
+
+    /* Linear gradient of the hero */
+    --nova-orange-gradient-1: linear-gradient(90deg, var(--nova-orange-500) 0%, var(--nova-orange-400) 100%);
+
+    /* Gray / Neutral */
+    --nova-white: #ffffff;
+    --nova-gray-50: #f9fafb;
+    --nova-gray-200: #e5e7eb;
+    --nova-gray-300: #d1d5dc;
+    --nova-gray-400: #99a1af;
+    --nova-gray-500: #4a5565;
+    --nova-gray-600: #364153;
+    --nova-gray-800: #1e2939;
+    --nova-gray-900: #101828;
+    --nova-gray-950: #0a0a0a;
+
+    /* Blue */
+    --nova-blue-50: #dbeafe;
+    --nova-blue-700: #193cb8;
+
+    /* Purple */
+    --nova-purple-50: #f3e8ff;
+    --nova-purple-700: #6e11b0;
+
+    /* Green */
+    --nova-green-50: #dcfce7;
+    --nova-green-800: #016630;
+
+    /* Shadow */
+    --nova-black-alpha-10: rgba(0, 0, 0, 0.1);
+    --nova-black-alpha-50: rgba(10, 10, 10, 0.5);
+
+}
+
+
+/* ========= The Design tokens ========== */
+@theme { 
+    /* Surface / Background */
+    --surface-primary: var(--nova-white);
+    --surface-secondary: var(--nova-gray-50);
+    --surface-card: var(--nova-white);
+    --surface-footer: var(--nova-gray-900);
+    --surface-hero-start: var(--nova-orange-500);
+    --surface-hero-end: var(--nova-orange-400);
+    --surface-hero: var(--nova-orange-gradient-1);
+
+    /* Text */
+    --text-primary: var(--nova-gray-950);
+    --text-secondary: var(--nova-gray-600);
+    --text-tertiary: var(--nova-gray-500);
+    --text-muted: var(--nova-gray-400);
+    --text-on-footer: var(--nova-white);
+    --text-on-hero: var(--nova-white);
+    --text-on-hero-sub: var(--nova-orange-50);
+    --text-placeholder: var(--nova-black-alpha-50);
+    --text-accent: var(--nova-orange-500);
+
+    /* Border */
+    --border-default: var(--nova-gray-300);
+    --border-card: var(--nova-gray-200);
+    --border-footer: var(--nova-gray-800);
+
+    /* Button */
+    --button-primary-bg: var(--nova-orange-500);
+    --button-primary-text: var(--nova-white);
+    --button-ghost-text: var(--nova-orange-500);
+
+    /* Nav */
+    --nav-link: var(--nova-gray-600);
+
+    /* Badges*/
+    --badge-beginner-bg: var(--nova-green-50);
+    --badge-beginner-text: var(--nova-green-800);
+
+    --badge-intermediate-bg: var(--nova-blue-50);
+    --badge-intermediate-text: var(--nova-blue-700);
+
+
+    --badge-advanced-bg: var(--nova-purple-50);
+    --badge-advanced-text: var(--nova-purple-700);
+
+    /* Category Label */
+    --category-text: var(--nova-orange-500);
+
+    /* Shadow */
+    --shadow-sm: 0px 1px 3px 0px var(--nova-black-alpha-10),
+        0px 1px 2px 0px var(--nova-black-alpha-10);
+    --shadow-md: 0px 4px 6px -1px var(--nova-black-alpha-10),
+        0px 2px 4px -2px var(--nova-black-alpha-10);
+}
+
+    
