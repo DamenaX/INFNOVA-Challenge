@@ -44,7 +44,7 @@ function Header() {
                 </ul>
             </nav>
 
-            <div className="min-w-46 flex justify-between">
+            <div className="flex justify-between space-x-4">
                 <button className="text-button-ghost-text">Sign in</button>
                 <button className="text-button-primary-text bg-button-primary-bg px-4 py-2 rounded-xl">Enroll Now</button>
             </div>
