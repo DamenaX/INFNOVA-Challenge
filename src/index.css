@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import 'tailwindcss';
 
 /* ========= Raw Primitiives ========== */
@@ -38,7 +39,6 @@
     /* Shadow */
     --nova-black-alpha-10: rgba(0, 0, 0, 0.1);
     --nova-black-alpha-50: rgba(10, 10, 10, 0.5);
-
 }
 
 
@@ -96,6 +96,20 @@
         0px 1px 2px 0px var(--nova-black-alpha-10);
     --color-shadow-md: 0px 4px 6px -1px var(--nova-black-alpha-10),
         0px 2px 4px -2px var(--nova-black-alpha-10);
+
+    /* Font */
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif; /*setting default sans font to Inter*/
 }
 
+
+/* Modifying the defauults (font and text colorr ) */
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    font-weight: 500; 
     
+    color: var(--color-text-primary);
+    background-color: var(--color-surface-primary);
+
+  }
+}
