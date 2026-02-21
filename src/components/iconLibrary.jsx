@@ -4,7 +4,7 @@ import Check from '../assets/icons/check.svg?react'
 import Star from '../assets/icons/star.svg?react'
 import Instructor from '../assets/icons/instructor.svg?react'
 
-const Icons = {
+const icons = {
     people: (props) => <People  {...props} />,
     clock: (props) => <Clock {...props} />,
     check: (props) => <Check {...props} />,
@@ -13,4 +13,4 @@ const Icons = {
     
 };
 
-export default Icons;
+export default icons;
