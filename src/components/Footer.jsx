@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <footer className="flex flex-col w-dvw p-4 bg-surface-footer">
+        <footer className="flex flex-col w-full p-4 bg-surface-footer">
             {/* company info and sitemap container */}
             <div className="flex flex-wrap w-full justify-between">
 
