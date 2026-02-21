@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import CourseGrid from './components/CourseGrid'
+import CourseCard from './components/CourseCard'
 
 
 function App() {
@@ -10,8 +12,14 @@ function App() {
 
   return (
     <>
-    <Header />
-    <Footer />
+      <Header />
+        <CourseGrid>
+          <CourseCard />
+          <CourseCard />
+          <CourseCard />
+          <CourseCard />
+        </CourseGrid>
+      <Footer />
     </>
   )
 }
