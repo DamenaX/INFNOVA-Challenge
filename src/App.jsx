@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import CourseGrid from './components/CourseGrid'
 import CourseCard from './components/CourseCard'
+import SearchBar from './components/SearchBar'
 
 
 function App() {
@@ -13,12 +14,13 @@ function App() {
   return (
     <>
       <Header />
-        <CourseGrid>
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-        </CourseGrid>
+      <SearchBar />
+      <CourseGrid>
+        <CourseCard />
+        <CourseCard />
+        <CourseCard />
+        <CourseCard />
+      </CourseGrid>
       <Footer />
     </>
   )
