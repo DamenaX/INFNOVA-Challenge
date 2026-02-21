@@ -11,13 +11,13 @@ function IconStat({ icon, field, value, variant = "default" }) {
         "hero": "text-text-on-hero"
     }
     const Icon = icon;
-    
+
     return (
         <div className={`flex space-x-2 items-center ${variants[variant]}`}>
             <Icon className="h-5 aspect-square" color="none" />
 
             {/* if field is given, return a "field: value" format with bold value. otherwise value only */}
-            <p className={`text-[16px]  flex`}>
+            <p className={`flex`}>
                 {field ?
                     <><span className="font-normal">{field}:</span>&nbsp;<span> {value} </span> </> :
                     <><span className="font-normal"> {value} </span></>
