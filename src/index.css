@@ -92,9 +92,9 @@
     --color-category-text: var(--nova-orange-500);
 
     /* Shadow */
-    --color-shadow-sm: 0px 1px 3px 0px var(--nova-black-alpha-10),
+    --shadow-nova-sm: 0px 1px 3px 0px var(--nova-black-alpha-10),
         0px 1px 2px 0px var(--nova-black-alpha-10);
-    --color-shadow-md: 0px 4px 6px -1px var(--nova-black-alpha-10),
+    --shadow-nova-md: 0px 4px 6px -1px var(--nova-black-alpha-10),
         0px 2px 4px -2px var(--nova-black-alpha-10);
 
     /* Font */
