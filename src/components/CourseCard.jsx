@@ -6,7 +6,7 @@ import courses from '../courses.json'
 function CourseCard() {
 
     return (
-        <div className="flex flex-col rounded-xl overflow-hidden shadow-nova-md ml-3 max-w-[330px] h-[408px]">
+        <div className="flex flex-col rounded-xl overflow-hidden shadow-nova-md flex-none min-w-[280px] w-full h-full">
             {/* course image contianer */}
             <div className="aspect-330/192 flex flex-1/2 justify-end p-2 bg-[url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80')] bg-cover bg-center bg-no-repeat">
                 <Badge level='beginner' />
@@ -25,7 +25,7 @@ function CourseCard() {
 
 
                 {/* icon information */}
-                <div className="flex justify-between items-center box-border border-t-2 border-border-card py-2 text-[14px]">
+                <div className="flex justify-between items-center box-border border-t-2 border-border-card py-2 text-[14px] mt-auto">
                     <div className="flex space-x-4 ">
                         <IconStat icon={icons.clock} value="12 Weeks" />
                         <IconStat icon={icons.people} value="3,123" />
