@@ -5,7 +5,7 @@ function capitalize(str) {
 }
 
 function Badge({level = "default"}) {
-    const base = "flex items-center justify-center text-[14px] rounded-full px-3.5 py-1.5 w-fit h-fit";
+    const base = "flex items-center justify-center font-normal text-[12px] rounded-full px-3 py-1 w-fit h-fit";
 
     const variants = {
         "default": "bg-gray-100 text-gray-800",
