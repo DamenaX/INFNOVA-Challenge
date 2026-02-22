@@ -7,15 +7,15 @@ function HeroSection({ variant = "main", children, category, title, description,
     const MainHero = (
         <div className="flex py-16 px-4">
             <div className="flex flex-col space-y-4 basis-[60%] max-md:basis-[100%]">
-                <h1 className="text-[48px]">{title}</h1>
-                <p className="text-[20px] text-text-on-hero-sub font-normal tracking-[-0.439px]">{description}</p>
+                <h1 className="max-md:text-[40px] max-md:leading-[1.2] text-[48px]">{title}</h1>
+                <p className="max-md:text-[18px] text-[20px] text-text-on-hero-sub font-normal tracking-[-0.439px]">{description}</p>
             </div>
         </div>
     )
 
     const CourseHero = (
         <div className="flex items-start md:flex-rowjustify-between gap-10 py-12 px-8">
-            <div className="md:basis-[60%]  pr-12 space-y-5 ">
+            <div className="md:basis-[60%]  lg:pr-12 space-y-5 ">
                 <p className="text-text-on-hero-category uppercase font-normal">{category}</p>
                 <div className="space-y-4">
                     <h1 className="text-[36px] leading-tight">{title}</h1>
