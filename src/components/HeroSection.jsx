@@ -6,9 +6,9 @@ function HeroSection({ variant = "main", children, category, title, description,
 
     const MainHero = (
         <div className="flex py-16 px-4">
-            <div className="flex flex-col space-y-4 basis-[60%]">
+            <div className="flex flex-col space-y-4 basis-[60%] max-md:basis-[100%]">
                 <h1 className="text-[48px]">{title}</h1>
-                <p className="text-[20px] font-normal tracking-[-0.439px]">{description}</p>
+                <p className="text-[20px] text-text-on-hero-sub font-normal tracking-[-0.439px]">{description}</p>
             </div>
         </div>
     )
