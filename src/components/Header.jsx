@@ -1,6 +1,6 @@
 function Header() {
     return (
-        <header className="w-full h-20 flex justify-between items-center px-8">
+        <header className="w-full h-20 flex justify-between items-center px-8 shadow-nova-sm">
             <a href='/'>
                 <svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_10_1003)">
