@@ -5,10 +5,10 @@ function SearchBar() {
     return (
         <div className="flex flex-col space-y-8 w-full">
             {/* Search and filtering */}
-            <div className="flex flex-wrap space-x-2 space-y-2 p-6 w-full bg-surface-primary shadow-nova-sm rounded-[10px] h-full">
+            <div className="flex flex-wrap justify-center space-x-2 space-y-2 p-6 w-full bg-surface-primary shadow-nova-sm rounded-[10px] h-full">
 
                 {/* Search field */}
-                <div className="flex items-center space-x-2 flex-70 px-5 py-2 border border-border-default rounded-xl font-normal text-text-muted text-[16px] focus-within:border-text-accent focus-within:text-text-secondary min-w-70 h-10.5">
+                <div className="flex items-center space-x-2 flex-70 px-5 py-2 border border-border-default rounded-xl font-normal text-text-muted text-[16px] focus-within:border-text-accent focus-within:text-text-secondary min-w-64 h-10.5">
                     <SearchIcon className="" />
                     <input type="text" name="query" placeholder="Search courses, instructors..." className="placeholder:text-text-tertiary/80 w-full outline-none" />
                 </div>
