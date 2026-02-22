@@ -12,7 +12,7 @@ function extractInitials(str) {
     return firstLetter + secondLetter
 }
 
-function CourseInfo({ skills, description, instructor }) {
+function CourseInfo({ course }) {
     const BookIcon = icons.book
     return (
         <section className="flex flex-col space-y-8">
@@ -26,10 +26,11 @@ function CourseInfo({ skills, description, instructor }) {
                 </div>
 
                 <ul className="grid grid-rows-3 grid-flow-col gap-4 text-[16px]">
-                    <li> <IconStat icon={icons.check} value={skills[0]} /> </li>
-                    <li> <IconStat icon={icons.check} value={skills[1]} /> </li>
-                    <li> <IconStat icon={icons.check} value={skills[2]} /> </li>
-                    <li> <IconStat icon={icons.check} value={skills[3]} /> </li>
+                    {course.skills.map(skill => {
+                        return (
+                            <li> <IconStat icon={icons.check} value={skill} /> </li>
+                        )
+                    })}
                 </ul>
 
             </div>
@@ -37,7 +38,7 @@ function CourseInfo({ skills, description, instructor }) {
             {/* Course Description */}
             <div className="flex flex-col space-y-4 bg-surface-primary shadow-nova-md p-8 rounded-[10px]">
                 <h2 className="text-[24px]">Course Description</h2>
-                <p className="text-[16px] text-text-secondary font-normal">{description}</p>
+                <p className="text-[16px] text-text-secondary font-normal">{course.description}</p>
             </div>
 
             {/* Course Instructor */}
@@ -47,13 +48,13 @@ function CourseInfo({ skills, description, instructor }) {
                     {/* profile picture */}
                     <div>
                         <div className="flex justify-center items-center w-16 h-16 rounded-full rounded-full bg-surface-hero p-4 text-[20px] text-text-on-hero">
-                            {extractInitials(instructor)}
+                            {extractInitials(course.instructor)}
                         </div>
                     </div>
 
                     {/* Name and Bio */}
                     <div className="flex flex-col space-y-2">
-                        <h3 className="text-[20px]">{instructor}</h3>
+                        <h3 className="text-[20px]">{course.instructor}</h3>
                         <p className="text-[16px] text-text-secondary font-normal">Instructor Bio were not provided by the API. Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
                     </div>
                 </div>
