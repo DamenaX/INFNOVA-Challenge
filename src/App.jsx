@@ -9,6 +9,7 @@ import SearchBar from './components/SearchBar'
 import CoursesContainer from './components/CoursesContainer'
 import HeroSection from './components/HeroSection'
 import MainContainer from './components/MainContainer'
+import CourseInfo from './components/CourseInfo'
 
 
 function App() {
@@ -30,6 +31,11 @@ function App() {
           numberOfStudents="3,124"
           rating="4.2"
         />
+
+          <CourseInfo instructor="Lidetu Temesgen"
+            skills={["Computer", "Hands", "Tomatoe", "wars"]}
+            description={"JJJJJJ"}
+          />
 
         <CoursesContainer>
           <SearchBar />
