@@ -15,7 +15,7 @@ function extractInitials(str) {
 function CourseInfo({ skills, description, instructor }) {
     const BookIcon = icons.book
     return (
-        <section className="flex flex-col space-y-8 max-w-[680px]">
+        <section className="flex flex-col space-y-8">
             {/* Learning Objectives */}
             <div className="flex flex-col p-8 rounded-[10px] bg-surface-primary shadow-nova-md space-y-6 text-[24px]">
                 <div className="flex space-x-3 items-center">
@@ -35,13 +35,13 @@ function CourseInfo({ skills, description, instructor }) {
             </div>
 
             {/* Course Description */}
-            <div className="flex flex-col space-y-4 bg-surface-primary shadow-nova-md p-8">
+            <div className="flex flex-col space-y-4 bg-surface-primary shadow-nova-md p-8 rounded-[10px]">
                 <h2 className="text-[24px]">Course Description</h2>
                 <p className="text-[16px] text-text-secondary font-normal">{description}</p>
             </div>
 
             {/* Course Instructor */}
-            <div className="flex flex-col space-y-4 bg-surface-primary shadow-nova-md p-8">
+            <div className="flex flex-col space-y-4 bg-surface-primary shadow-nova-md p-8 rounded-[10px]">
                 <h2 className="text-[24px]">Your Instructor</h2>
                 <div className="flex space-x-4">
                     {/* profile picture */}

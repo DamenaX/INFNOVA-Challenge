@@ -11,6 +11,7 @@ import HeroSection from './components/HeroSection'
 import MainContainer from './components/MainContainer'
 import CourseInfo from './components/CourseInfo'
 import Enroll from './components/Enroll'
+import HorizontalContainer from './components/HorizontalContainer'
 
 
 function App() {
@@ -32,14 +33,16 @@ function App() {
           numberOfStudents="3,124"
           rating="4.2"
         />
+        <HorizontalContainer>
+          <CourseInfo instructor="Lidetu Temesgen"
+            skills={["Computer", "Hands", "Tomatoe", "wars"]}
+            description={"JJJJJJ"}
+          />
 
-        <CourseInfo instructor="Lidetu Temesgen"
-          skills={["Computer", "Hands", "Tomatoe", "wars"]}
-          description={"JJJJJJ"}
-        />
+          <Enroll duration="9 weeks"
+            enrolled="3,456" />
+        </HorizontalContainer>
 
-        <Enroll duration="9 weeks"
-          enrolled="3,456" />
 
         <CoursesContainer>
           <SearchBar />

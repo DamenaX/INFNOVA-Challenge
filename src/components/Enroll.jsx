@@ -4,7 +4,7 @@ import icons from './iconLibrary'
 
 function Enroll({duration, enrolled}) {
     return (
-        <section className="flex flex-col p-6 space-y-6 rounded-[10px] bg-surface-primary shadow-nova-md font-normal max-w-[330px]">
+        <section className="flex flex-col w-full h-fit p-6 space-y-6 rounded-[10px] bg-surface-primary shadow-nova-md font-normal">
             {/* Enroll CTA */}
             <div className="space-y-2">
                 <h2 className="text-[30px]">Enroll Today</h2>
