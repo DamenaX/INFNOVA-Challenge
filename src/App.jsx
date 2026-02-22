@@ -21,7 +21,7 @@ function App() {
         title="Explore Our Courses"
         description="Learn how modern companies deploy and scale applications in the cloud. Build resilient infrastructure, automate deployments, and understand cost-efficient architecture."
         image="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80"
-        badge="intermediate"
+        badge="intermediate level"
         instructor="Samuel Getachew"
         duration="12 Weeks"
         numberOfStudents="3,124"

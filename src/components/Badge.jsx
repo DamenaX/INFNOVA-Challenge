@@ -7,6 +7,13 @@ function capitalize(str) {
 function Badge({level = "default"}) {
     const base = "flex items-center justify-center font-normal text-[12px] rounded-full px-3 py-1 w-fit h-fit";
 
+    /* The funciton will be able to take strings like "intermediate level xyz" */
+    let variant
+    if (level.includes("beginner")) variant = "beginner";
+    if (level.includes("intermediate")) variant = "intermediate";
+    if (level.includes("advanced")) variant = "advanced";
+
+
     const variants = {
         "default": "bg-gray-100 text-gray-800",
         "beginner": "bg-badge-beginner-bg text-badge-beginner-text",
@@ -15,7 +22,7 @@ function Badge({level = "default"}) {
     }
 
     return (
-        <div className={`${base} ${variants[level]}`}>
+        <div className={`${base} ${variants[variant]}`}>
             <span className="w-fit h-fit">{capitalize(level)}</span>
         </div>
     )
