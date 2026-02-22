@@ -12,6 +12,7 @@ import MainContainer from './components/MainContainer'
 import CourseInfo from './components/CourseInfo'
 import Enroll from './components/Enroll'
 import HorizontalContainer from './components/HorizontalContainer'
+import BackButton from './components/BackButton'
 
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
   return (
     <>
       <Header />
+      <BackButton />
+      
       <MainContainer>
 
         <HeroSection variant="courseInfo"

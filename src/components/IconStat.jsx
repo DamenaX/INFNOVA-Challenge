@@ -14,7 +14,7 @@ function IconStat({ icon, field, value, variant = "default" }) {
 
     return (
         <div className={`flex space-x-2 items-center ${variants[variant]}`}>
-            <Icon className="h-5 aspect-square" color="none" />
+            <Icon className="h-[1.25em] w-[1.25em] aspect-square" color="none" />
 
             {/* if field is given, return a "field: value" format with bold value. otherwise value only */}
             <p className={`flex`}>
