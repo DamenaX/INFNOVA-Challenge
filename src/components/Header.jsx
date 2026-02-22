@@ -1,3 +1,5 @@
+import Button from './Button'
+
 function Header() {
     return (
         <header className="w-full h-20 flex justify-between items-center px-8 shadow-nova-sm">
@@ -45,8 +47,8 @@ function Header() {
             </nav>
 
             <div className="flex justify-between space-x-4">
-                <button className="text-button-ghost-text">Sign in</button>
-                <button className="text-button-primary-text bg-button-primary-bg px-4 py-2 rounded-xl">Enroll Now</button>
+                <Button variant="link">Sign in</Button>
+                <Button variant="default">Enroll Now</Button>
             </div>
         </header>
     )
