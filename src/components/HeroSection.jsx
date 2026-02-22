@@ -27,7 +27,7 @@ function HeroSection({ variant = "main", children, category, title, description,
                     <IconStat icon={icons.instructor} variant="hero" field="Instructor" value={instructor} />
                     <IconStat icon={icons.clock} variant="hero" value={duration} />
                     <IconStat icon={icons.people} variant="hero" value={numberOfStudents} />
-                    <IconStat icon={icons.star} variant="hero" value={rating} />
+                    <IconStat icon={icons.brightStar} variant="hero" value={rating} />
                 </div>
                 <Badge level={badge} />
             </div>

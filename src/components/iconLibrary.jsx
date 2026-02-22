@@ -6,6 +6,7 @@ import Instructor from '../assets/icons/instructor.svg?react'
 import Search from '../assets/icons/search.svg?react'
 import Book from '../assets/icons/book.svg?react'
 import BackArrow from '../assets/icons/backArrow.svg?react'
+import BrightStar from '../assets/icons/brightStart.svg?react'
 
 const icons = {
     people: (props) => <People  {...props} />,
@@ -16,6 +17,7 @@ const icons = {
     search: (props) => <Search {...props} />,
     book: (props) => <Book {...props} />,
     backArrow: (props) => <BackArrow {...props} />,
+    brightStar: (props) => <BrightStar {...props} />,
     
 };
 
