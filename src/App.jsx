@@ -10,6 +10,7 @@ import CoursesContainer from './components/CoursesContainer'
 import HeroSection from './components/HeroSection'
 import MainContainer from './components/MainContainer'
 import CourseInfo from './components/CourseInfo'
+import Enroll from './components/Enroll'
 
 
 function App() {
@@ -32,10 +33,13 @@ function App() {
           rating="4.2"
         />
 
-          <CourseInfo instructor="Lidetu Temesgen"
-            skills={["Computer", "Hands", "Tomatoe", "wars"]}
-            description={"JJJJJJ"}
-          />
+        <CourseInfo instructor="Lidetu Temesgen"
+          skills={["Computer", "Hands", "Tomatoe", "wars"]}
+          description={"JJJJJJ"}
+        />
+
+        <Enroll duration="9 weeks"
+          enrolled="3,456" />
 
         <CoursesContainer>
           <SearchBar />
