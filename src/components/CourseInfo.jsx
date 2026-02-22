@@ -17,11 +17,11 @@ function CourseInfo({ skills, description, instructor }) {
     return (
         <section className="flex flex-col space-y-8">
             {/* Learning Objectives */}
-            <div className="flex flex-col p-8 rounded-[10px] bg-surface-primary shadow-nova-md space-y-6 text-[24px]">
+            <div className="flex flex-col w-full p-8 rounded-[10px] bg-surface-primary shadow-nova-md space-y-6 text-[24px]">
                 <div className="flex space-x-3 items-center">
-                   
-                        <BookIcon className="text-text-accent h-[1em] " />
-                  
+
+                    <BookIcon className="text-text-accent h-[1em] " />
+
                     <h2 className="">What You'll Learn</h2>
                 </div>
 
@@ -54,7 +54,7 @@ function CourseInfo({ skills, description, instructor }) {
                     {/* Name and Bio */}
                     <div className="flex flex-col space-y-2">
                         <h3 className="text-[20px]">{instructor}</h3>
-                        <p className="text-[16px] text-text-secondary font-normal">Instructor Bio were not provided by the API. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, omnis labore sed illum nostrum harum molestiae totam quae vitae accusantium obcaecati consequatur ratione iste repellat quam, laudantium eos dolore illo. </p>
+                        <p className="text-[16px] text-text-secondary font-normal">Instructor Bio were not provided by the API. Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
                     </div>
                 </div>
             </div>

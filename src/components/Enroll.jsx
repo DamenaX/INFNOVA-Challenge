@@ -2,9 +2,9 @@ import Button from './Button'
 import IconStat from './IconStat'
 import icons from './iconLibrary'
 
-function Enroll({duration, enrolled}) {
+function Enroll({ duration, enrolled }) {
     return (
-        <section className="flex flex-col w-full h-fit p-6 space-y-6 rounded-[10px] bg-surface-primary shadow-nova-md font-normal">
+        <section className="flex flex-col w-full min-w-[320px] max-w-[400px] h-fit p-6 space-y-6 rounded-[10px] bg-surface-primary shadow-nova-md font-normal">
             {/* Enroll CTA */}
             <div className="space-y-2">
                 <h2 className="text-[30px]">Enroll Today</h2>
@@ -21,11 +21,11 @@ function Enroll({duration, enrolled}) {
             <div className="flex flex-col pt-6 border-t-2 border-border-default space-y-4">
                 <h3 className="text-[18px] font-semibold">This course includes: </h3>
                 <ul className="flex flex-col space-y-3">
-                    <li><IconStat icon={icons.check} value={`${duration} of content`}/></li>
-                    <li><IconStat icon={icons.check} value="Lifetime access"/></li>
-                    <li><IconStat icon={icons.check} value="Certificate of Completion"/></li>
-                    <li><IconStat icon={icons.check} value="Access on mobile and desktop"/></li>
-                    <li><IconStat icon={icons.check} value="Downloadable resources"/></li>
+                    <li><IconStat icon={icons.check} value={`${duration} of content`} /></li>
+                    <li><IconStat icon={icons.check} value="Lifetime access" /></li>
+                    <li><IconStat icon={icons.check} value="Certificate of Completion" /></li>
+                    <li><IconStat icon={icons.check} value="Access on mobile and desktop" /></li>
+                    <li><IconStat icon={icons.check} value="Downloadable resources" /></li>
                 </ul>
             </div>
         </section>

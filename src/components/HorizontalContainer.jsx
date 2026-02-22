@@ -1,6 +1,6 @@
-function HorizontalContainer({children}) {
+function HorizontalContainer({ children }) {
     return (
-        <section className="flex py-12 px-8 justify-between gap-8">
+        <section className="max-md:flex-col-reverse flex py-12 px-8 justify-between gap-8 space-y-8">
             {children}
         </section>
     )
