@@ -6,7 +6,7 @@ export function ThemeProvider({ children }) {
     // Initialize state from localStorage, default to 'light'
     const [theme, setTheme] = useState(() => {
         const savedTheme = localStorage.getItem('nova-theme');
-        // We strictly use 'light' or whatever was saved, ignoring system preference here
+        // ignoring system preference (don't want dark browser/system theme to trigger dark mode )
         return savedTheme || 'light';
     });
 
