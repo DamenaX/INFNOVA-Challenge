@@ -1,7 +1,7 @@
-import IconStat from './IconStat'
-import icons from './iconLibrary'
-import Badge from './Badge'
-import formatNumber from '../utils/formatNumber'
+import IconStat from '../common-ui/IconStat'
+import icons from '../iconLibrary'
+import Badge from '../common-ui/Badge'
+import formatNumber from '../../utils/formatNumber'
 import { Link } from 'react-router-dom'
 
 

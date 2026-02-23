@@ -1,5 +1,5 @@
-import icons from './iconLibrary'
-import IconStat from './IconStat'
+import icons from '../iconLibrary'
+import IconStat from '../common-ui/IconStat'
 
 function extractInitials(str) {
     if (!str) return ""

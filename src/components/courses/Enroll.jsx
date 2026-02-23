@@ -1,7 +1,7 @@
-import Button from './Button'
-import IconStat from './IconStat'
-import icons from './iconLibrary'
-import formatNumber from '../utils/formatNumber'
+import Button from '../common-ui/Button'
+import IconStat from '../common-ui/IconStat'
+import icons from '../iconLibrary'
+import formatNumber from '../../utils/formatNumber'
 
 function Enroll({ course }) {
     return (

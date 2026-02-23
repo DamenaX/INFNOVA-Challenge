@@ -1,4 +1,4 @@
-import icons from './iconLibrary'
+import icons from '../iconLibrary'
 import { Link } from 'react-router-dom'
 
 function BackButton() {

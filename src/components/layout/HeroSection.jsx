@@ -1,7 +1,7 @@
-import Badge from './Badge'
-import IconStat from './IconStat'
-import icons from './iconLibrary'
-import formatNumber from '../utils/formatNumber'
+import Badge from '../common-ui/Badge'
+import IconStat from '../common-ui/IconStat'
+import icons from '../iconLibrary'
+import formatNumber from '../../utils/formatNumber'
 
 function HeroSection({ variant = "main", course = {}, heading, subheading }) {
 

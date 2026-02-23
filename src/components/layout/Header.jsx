@@ -1,8 +1,8 @@
 import { useState, useRef } from 'react'
-import Button from './Button'
-import icons from './IconLibrary'
+import Button from '../common-ui/Button'
+import icons from '../iconLibrary'
 import { Link } from 'react-router-dom'
-import { useTheme } from '../context/ThemeContext'
+import { useTheme } from '../../context/ThemeContext'
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false)

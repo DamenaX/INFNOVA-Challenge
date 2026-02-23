@@ -1,4 +1,4 @@
-import icons from './iconLibrary'
+import icons from '../iconLibrary'
 
 function SearchBar({ filters, onFilterChange, options }) {
     const SearchIcon = icons.search
