@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 function CourseCard({ course }) {
 
     return (
-        <Link to={`/courses/${course.id}`} className="flex flex-col rounded-xl overflow-hidden shadow-nova-md flex-none min-w-[280px] w-full h-full">
+        <Link to={`/courses/${course.id}`} className="flex flex-col flex-none w-full h-full min-w-[280px] rounded-xl overflow-hidden shadow-nova-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg bg-surface-card">
             {/* course image contianer */}
             <div className="h-48 flex-shrink-0 flex justify-end p-2 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${course.thumbnail})` }}>
                 <Badge level={course.level} />
