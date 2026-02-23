@@ -2,13 +2,13 @@ import Badge from './Badge'
 import IconStat from './IconStat'
 import icons from './iconLibrary'
 
-function HeroSection({ variant = "main", course }) {
+function HeroSection({ variant = "main", course = {}, heading, subheading }) {
 
     const MainHero = (
         <div className="flex py-16 px-4">
             <div className="flex flex-col space-y-4 basis-[60%] max-md:basis-[100%]">
-                <h1 className="max-md:text-[40px] max-md:leading-[1.2] text-[48px]">{course.title}</h1>
-                <p className="max-md:text-[18px] text-[20px] text-text-on-hero-sub font-normal tracking-[-0.439px]">{course.description}</p>
+                <h1 className="max-md:text-[40px] max-md:leading-[1.2] text-[48px]">{heading}</h1>
+                <p className="max-md:text-[18px] text-[20px] text-text-on-hero-sub font-normal tracking-[-0.439px]">{subheading}</p>
             </div>
         </div>
     )
