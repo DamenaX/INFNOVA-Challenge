@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import useFetch from '../services/useFetch'
 import { getCourses } from '../services/apiClient'
 import Header from '../components/Header'
@@ -18,6 +18,28 @@ import CourseCardSkeleton from '../components/skeletons/CourseCardSkeleton'
 function CourseListPage() {
   const { data: courses, loading, error } = useFetch(getCourses)
 
+  const [filters, setFilters] = useState({ query: '', category: '', level: '' })
+
+  const filteredCourses = useMemo(() => {
+    if (!courses) return []
+    return courses.filter(course => {
+      const matchesSearch =
+        course.title.toLowerCase().includes(filters.query.toLowerCase()) ||
+        course.instructor.toLowerCase().includes(filters.query.toLowerCase())
+
+      const matchesCategory = filters.category === '' || course.category === filters.category
+      const matchesLevel = filters.level === '' || course.level === filters.level
+
+      return matchesSearch && matchesCategory && matchesLevel
+    })
+  }, [courses, filters])
+
+  const searchOptions = useMemo(() => ({
+    categories: [...new Set(courses?.map(c => c.category) || [])],
+    levels: [...new Set(courses?.map(c => c.level) || [])],
+    totalCount: courses?.length || 0,
+    filteredCount: filteredCourses.length
+  }), [courses, filteredCourses.length])
 
   return (
     <>
@@ -27,11 +49,11 @@ function CourseListPage() {
       />
 
       <CoursesContainer>
-        <SearchBar />
+        <SearchBar filters={filters} onFilterChange={setFilters} options={searchOptions} />
         <CourseGrid>
           {loading
             ? Array(6).fill(null).map((_, i) => <CourseCardSkeleton key={i} />)
-            : courses.map(course => <CourseCard key={course.id} course={course} />)
+            : filteredCourses.map(course => <CourseCard key={course.id} course={course} />)
           }
         </CourseGrid>
       </CoursesContainer>
