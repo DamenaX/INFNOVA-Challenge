@@ -15,6 +15,7 @@ import Enroll from '../components/Enroll'
 import CourseInfoSkeleton from '../components/skeletons/CourseInfoSkeleton'
 import EnrollSkeleton from '../components/skeletons/EnrollSkeleton'
 import HeroSkeleton from '../components/skeletons/HeroSkeleton'
+import BackButton from '../components/BackButton'
 
 
 
@@ -26,6 +27,7 @@ function CourseDetailPage() {
 
     return (
         <>
+            <BackButton />
             {loading ? <HeroSkeleton /> : <HeroSection variant="course-detail"
                 course={course}
             />}
