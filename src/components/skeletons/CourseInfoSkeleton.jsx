@@ -4,7 +4,7 @@
 // 3. "Your Instructor" with avatar + bio
 
 function Shimmer({ className }) {
-    return <div className={`bg-gray-200 rounded-md animate-pulse ${className}`} />
+    return <div className={`bg-gray-200 rounded-sm animate-pulse ${className}`} />
 }
 
 function CourseInfoSkeleton() {
@@ -12,10 +12,10 @@ function CourseInfoSkeleton() {
         <section className="flex flex-col space-y-8">
 
             {/* ── Card 1: What You'll Learn ── */}
-            <div className="flex flex-col w-full p-8 rounded-[10px] bg-surface-primary shadow-nova-md space-y-6">
+            <div className="flex flex-col w-full p-8 rounded-sm bg-surface-primary shadow-nova-md space-y-6">
                 {/* Header row: icon + title */}
                 <div className="flex space-x-3 items-center">
-                    <Shimmer className="w-6 h-6 rounded-full flex-shrink-0" />
+                    <Shimmer className="w-6 h-6 rounded-sm flex-shrink-0" />
                     <Shimmer className="h-6 w-44" />
                 </div>
 
@@ -23,15 +23,15 @@ function CourseInfoSkeleton() {
                 <ul className="grid grid-rows-3 grid-flow-col gap-4">
                     {Array(6).fill(null).map((_, i) => (
                         <li key={i} className="flex items-center space-x-2">
-                            <Shimmer className="w-4 h-4 rounded-full flex-shrink-0" />
-                            <Shimmer className="h-4 rounded-full" style={{ width: `${90 + (i % 4) * 15}px` }} />
+                            <Shimmer className="w-4 h-4 rounded-sm flex-shrink-0" />
+                            <Shimmer className="h-4 rounded-sm" style={{ width: `${90 + (i % 4) * 15}px` }} />
                         </li>
                     ))}
                 </ul>
             </div>
 
             {/* ── Card 2: Course Description ── */}
-            <div className="flex flex-col space-y-4 bg-surface-primary shadow-nova-md p-8 rounded-[10px]">
+            <div className="flex flex-col space-y-4 bg-surface-primary shadow-nova-md p-8 rounded-sm">
                 <Shimmer className="h-7 w-48" />
                 {/* Paragraph lines */}
                 <div className="space-y-2">
@@ -43,11 +43,11 @@ function CourseInfoSkeleton() {
             </div>
 
             {/* ── Card 3: Your Instructor ── */}
-            <div className="flex flex-col space-y-4 bg-surface-primary shadow-nova-md p-8 rounded-[10px]">
+            <div className="flex flex-col space-y-4 bg-surface-primary shadow-nova-md p-8 rounded-sm">
                 <Shimmer className="h-7 w-40" />
                 <div className="flex space-x-4">
                     {/* Avatar circle */}
-                    <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gray-200 animate-pulse" />
+                    <div className="flex-shrink-0 w-16 h-16 rounded-sm bg-gray-200 animate-pulse" />
                     {/* Name + bio lines */}
                     <div className="flex flex-col space-y-2 flex-1">
                         <Shimmer className="h-6 w-40" />
