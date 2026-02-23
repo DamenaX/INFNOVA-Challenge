@@ -4,10 +4,11 @@ import Footer from './components/Footer'
 import MainContainer from './components/MainContainer'
 import CourseDetailPage from './pages/CourseDetailPage'
 import CourseListPage from './pages/CourseListPage'
+import { ThemeProvider } from './context/ThemeContext'
 
 function App() {
   return (
-    <>
+    <ThemeProvider>
       <Header />
       <MainContainer>
         <Routes>
@@ -16,7 +17,7 @@ function App() {
         </Routes>
       </MainContainer>
       <Footer />
-    </>
+    </ThemeProvider>
   )
 }
 

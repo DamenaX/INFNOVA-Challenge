@@ -118,6 +118,58 @@
 
         color: var(--color-text-primary);
         background-color: var(--color-surface-primary);
-
+        transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
     }
+}
+
+/* Dark Mode Overrides */
+.dark {
+    /* Surface / Background */
+    --color-surface-primary: var(--nova-gray-950);
+    --color-surface-secondary: var(--nova-gray-900);
+    --color-surface-card: var(--nova-black-alpha-50);
+    --color-surface-footer: var(--nova-black-alpha-50);
+    --color-surface-hero-start: #2a0b00;
+    --color-button-primary-bg: #2a0b00;
+    --color-button-ghost-text: #2a0b00;
+    /* Darker orange for hero start */
+    --color-surface-hero-end: #1a0600;
+    /* Even darker orange for hero end */
+    --background-image-surface-hero: linear-gradient(90deg, var(--color-surface-hero-start) 0%, var(--color-surface-hero-end) 100%);
+
+    /* Text */
+    --color-text-primary: var(--nova-gray-50);
+    --color-text-secondary: var(--nova-gray-300);
+    --color-text-tertiary: var(--nova-gray-400);
+    --color-text-muted: var(--nova-gray-500);
+    --color-text-on-footer: var(--nova-white);
+    --color-text-on-hero: var(--nova-white);
+    --color-text-on-hero-category: var(--nova-orange-400);
+    --color-text-on-hero-sub: var(--nova-orange-100);
+    /* Leaving accent as is to pop */
+
+    /* Border */
+    --color-border-default: var(--nova-gray-800);
+    --color-border-card: var(--nova-gray-800);
+    --color-border-footer: var(--nova-gray-950);
+
+    /* Button variants adjustments if needed */
+    --color-button-ghost-text: var(--nova-gray-200);
+    /* Nav */
+    --color-nav-link: var(--nova-gray-300);
+
+    /* Badges adjusted for dark mode readability */
+    --color-badge-beginner-bg: rgba(1, 102, 48, 0.2);
+    --color-badge-beginner-text: var(--nova-green-50);
+
+    --color-badge-intermediate-bg: rgba(25, 60, 184, 0.2);
+    --color-badge-intermediate-text: var(--nova-blue-50);
+
+    --color-badge-advanced-bg: rgba(110, 17, 176, 0.2);
+    --color-badge-advanced-text: var(--nova-purple-50);
+
+    /* Shadows - make them darker in dark mode */
+    --shadow-nova-sm: 0px 1px 3px 0px rgba(0, 0, 0, 0.4), 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
+    --shadow-nova-md: 0px 4px 6px -1px rgba(0, 0, 0, 0.5), 0px 2px 4px -2px rgba(0, 0, 0, 0.5);
+    --shadow-nova-thumbnail: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
 }

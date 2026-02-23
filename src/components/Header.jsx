@@ -2,13 +2,17 @@ import { useState, useRef } from 'react'
 import Button from './Button'
 import icons from './IconLibrary'
 import { Link } from 'react-router-dom'
+import { useTheme } from '../context/ThemeContext'
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false)
     const [hoverStyle, setHoverStyle] = useState({ left: 0, width: 0, opacity: 0, transition: 'none' })
     const isHoveringNav = useRef(false)
+    const { theme, toggleTheme } = useTheme()
 
     const Logo = icons.infnovaLogo
+    const SunIcon = icons.sun
+    const MoonIcon = icons.moon
 
     const handleMouseEnter = (e) => {
         const { offsetLeft, offsetWidth } = e.currentTarget;
@@ -58,7 +62,7 @@ function Header() {
 
     return (
         <>
-            <header className="w-full h-20 flex justify-between items-center px-8 shadow-nova-sm relative z-40">
+            <header className="w-full h-20 flex justify-between items-center px-8 shadow-nova-sm relative z-40 bg-surface-primary">
 
                 {/* Logo */}
                 <Link to="/">
@@ -84,22 +88,39 @@ function Header() {
                     </ul>
                 </nav>
 
-                {/* Desktop auth buttoons, hidden below md */}
-                <div className="hidden md:flex justify-between space-x-4">
+                {/* Right side controls (Desktop) */}
+                <div className="hidden md:flex justify-between items-center space-x-4">
+                    <button
+                        onClick={toggleTheme}
+                        className="p-2 rounded-full text-text-secondary hover:bg-surface-secondary transition-colors"
+                        aria-label="Toggle Dark Mode"
+                    >
+                        {theme === 'light' ? <MoonIcon className="w-5 h-5" /> : <SunIcon className="w-5 h-5" />}
+                    </button>
                     <Button variant="link">Sign in</Button>
                     <Button variant="default">Enroll Now</Button>
                 </div>
 
-                {/* Hamburger Button that is isible only below md */}
-                <button
-                    className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 cursor-pointer"
-                    onClick={() => setMenuOpen(true)}
-                    aria-label="Open menu"
-                >
-                    <span className="block w-6 h-0.5 bg-gray-800 rounded-full" />
-                    <span className="block w-6 h-0.5 bg-gray-800 rounded-full" />
-                    <span className="block w-6 h-0.5 bg-gray-800 rounded-full" />
-                </button>
+                {/* Right side controls (Mobile) */}
+                <div className="flex items-center space-x-3 md:hidden">
+                    <button
+                        onClick={toggleTheme}
+                        className="p-2 rounded-full text-text-secondary hover:bg-surface-secondary transition-colors"
+                        aria-label="Toggle Dark Mode"
+                    >
+                        {theme === 'light' ? <MoonIcon className="w-5 h-5" /> : <SunIcon className="w-5 h-5" />}
+                    </button>
+                    {/* Hamburger Button that is isible only below md */}
+                    <button
+                        className="flex flex-col justify-center items-center w-10 h-10 gap-1.5 cursor-pointer"
+                        onClick={() => setMenuOpen(true)}
+                        aria-label="Open menu"
+                    >
+                        <span className="block w-6 h-0.5 bg-gray-800 dark:bg-gray-200 rounded-full" />
+                        <span className="block w-6 h-0.5 bg-gray-800 dark:bg-gray-200 rounded-full" />
+                        <span className="block w-6 h-0.5 bg-gray-800 dark:bg-gray-200 rounded-full" />
+                    </button>
+                </div>
             </header>
 
             {/*  mobile, small tablet left sliding menu */}
@@ -113,7 +134,7 @@ function Header() {
 
             {/* Slide-in Panel */}
             <aside
-                className={`fixed top-0 left-0 z-50 h-full w-72 bg-white shadow-nova-md flex flex-col
+                className={`fixed top-0 left-0 z-50 h-full w-72 bg-surface-primary shadow-nova-md flex flex-col
                     transition-transform duration-300 ease-in-out lg:hidden
                     ${menuOpen ? 'translate-x-0' : '-translate-x-full'}`}
             >
@@ -125,7 +146,7 @@ function Header() {
                     <button
                         onClick={() => setMenuOpen(false)}
                         aria-label="Close menu"
-                        className="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-900"
+                        className="w-8 h-8 flex items-center justify-center text-text-secondary hover:text-text-primary"
                     >
                         ✕
                     </button>
