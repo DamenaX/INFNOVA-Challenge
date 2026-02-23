@@ -28,7 +28,7 @@ function CourseInfo({ course }) {
                 <ul className="grid grid-rows-3 grid-flow-col gap-4 text-[16px] max-xs:grid-cols-1 max-xs:grid-flow-row ">
                     {course.skills.map(skill => {
                         return (
-                            <li> <IconStat icon={icons.check} value={skill} /> </li>
+                            <li> <IconStat variant="list" icon={icons.check} value={skill} /> </li>
                         )
                     })}
                 </ul>

@@ -22,11 +22,11 @@ function Enroll({ course }) {
             <div className="flex flex-col pt-6 border-t-2 border-border-default space-y-4">
                 <h3 className="text-[18px] font-semibold">This course includes: </h3>
                 <ul className="flex flex-col space-y-3">
-                    <li><IconStat icon={icons.check} value={`${course.duration} of content`} /></li>
-                    <li><IconStat icon={icons.check} value="Lifetime access" /></li>
-                    <li><IconStat icon={icons.check} value="Certificate of Completion" /></li>
-                    <li><IconStat icon={icons.check} value="Access on mobile and desktop" /></li>
-                    <li><IconStat icon={icons.check} value="Downloadable resources" /></li>
+                    <li><IconStat variant="list" icon={icons.check} value={`${course.duration} of content`} /></li>
+                    <li><IconStat variant="list" icon={icons.check} value="Lifetime access" /></li>
+                    <li><IconStat variant="list" icon={icons.check} value="Certificate of Completion" /></li>
+                    <li><IconStat variant="list" icon={icons.check} value="Access on mobile and desktop" /></li>
+                    <li><IconStat variant="list" icon={icons.check} value="Downloadable resources" /></li>
                 </ul>
             </div>
         </section>

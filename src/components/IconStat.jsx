@@ -7,13 +7,14 @@
 
 function IconStat({ icon, field, value, variant = "default" }) {
     const variants = {
-        "default": "text-text-tertiary",
-        "hero": "text-text-on-hero"
+        "default": "text-text-tertiary space-x-1",
+        "hero": "text-text-on-hero space-x-2",
+        "list": "text-text-tertiary space-x-3"
     }
     const Icon = icon;
 
     return (
-        <div className={`flex space-x-2 items-center ${variants[variant]}`}>
+        <div className={`flex items-center ${variants[variant]}`}>
             <Icon className="h-[1.25em] w-[1.25em] aspect-square" color="none" />
 
             {/* if field is given, return a "field: value" format with bold value. otherwise value only */}
