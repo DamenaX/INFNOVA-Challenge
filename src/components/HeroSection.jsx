@@ -32,8 +32,8 @@ function HeroSection({ variant = "main", course = {}, heading, subheading }) {
                 </div>
                 <Badge level={course.level} />
             </div>
-            <div className="flex justify-end basis-[40%] w-full items-start min-h-0 min-w-0 max-md:hidden">
-                <img src={course.thumbnail} className="w-full h-full max-w-[420px] object-cover rounded-[10px] shadow-nova-thumbnail" alt="Preview" />
+            <div className="flex justify-end basis-[40%] w-full h-[80%] items-start min-h-0 min-w-0 max-md:hidden rounded-[10px] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${course.thumbnail})` }}>
+                {/* <img src={course.thumbnail} className="w-full h-full max-w-[420px] object-cover  shadow-nova-thumbnail" alt="Preview" /> */}
             </div>
         </div>
     )
