@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import useFetch from '../services/useFetch'
 import { getCourses } from '../services/apiClient'
+import { filterCourses } from '../services/filterCourses'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import CourseGrid from '../components/CourseGrid'
@@ -12,26 +13,13 @@ import MainContainer from '../components/MainContainer'
 import CourseCardSkeleton from '../components/skeletons/CourseCardSkeleton'
 
 
-
-
-
 function CourseListPage() {
   const { data: courses, loading, error } = useFetch(getCourses)
 
   const [filters, setFilters] = useState({ query: '', category: '', level: '' })
 
   const filteredCourses = useMemo(() => {
-    if (!courses) return []
-    return courses.filter(course => {
-      const matchesSearch =
-        course.title.toLowerCase().includes(filters.query.toLowerCase()) ||
-        course.instructor.toLowerCase().includes(filters.query.toLowerCase())
-
-      const matchesCategory = filters.category === '' || course.category === filters.category
-      const matchesLevel = filters.level === '' || course.level === filters.level
-
-      return matchesSearch && matchesCategory && matchesLevel
-    })
+    return filterCourses(courses, filters)
   }, [courses, filters])
 
   const searchOptions = useMemo(() => ({
