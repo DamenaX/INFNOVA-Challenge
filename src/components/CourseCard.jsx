@@ -2,12 +2,13 @@ import IconStat from './IconStat'
 import icons from './iconLibrary'
 import Badge from './Badge'
 import formatNumber from '../utils/formatNumber'
+import { Link } from 'react-router-dom'
 
 
 function CourseCard({ course }) {
 
     return (
-        <div className="flex flex-col rounded-xl overflow-hidden shadow-nova-md flex-none min-w-[280px] w-full h-full">
+        <Link to={`/courses/${course.id}`} className="flex flex-col rounded-xl overflow-hidden shadow-nova-md flex-none min-w-[280px] w-full h-full">
             {/* course image contianer */}
             <div className="h-48 flex-shrink-0 flex justify-end p-2 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${course.thumbnail})` }}>
                 <Badge level={course.level} />
@@ -37,7 +38,7 @@ function CourseCard({ course }) {
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 

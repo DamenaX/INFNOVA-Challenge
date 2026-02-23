@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useParams } from 'react-router-dom'
 import useFetch from '../services/useFetch'
 import { getCourseDetails } from '../services/apiClient'
 import Header from '../components/Header'
@@ -21,7 +21,8 @@ import HeroSkeleton from '../components/skeletons/HeroSkeleton'
 
 
 function CourseDetailPage() {
-    const { data: course, loading, error } = useFetch(() => (getCourseDetails(1)))
+    const { id } = useParams()
+    const { data: course, loading, error } = useFetch(() => getCourseDetails(id))
 
     return (
         <>
