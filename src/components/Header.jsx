@@ -1,8 +1,56 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Button from './Button'
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false)
+    const [hoverStyle, setHoverStyle] = useState({ left: 0, width: 0, opacity: 0, transition: 'none' })
+    const isHoveringNav = useRef(false)
+
+    const handleMouseEnter = (e) => {
+        const { offsetLeft, offsetWidth } = e.currentTarget;
+
+        if (!isHoveringNav.current) {
+            isHoveringNav.current = true;
+            // Snap to the left edge of hovered item instantly
+            setHoverStyle({
+                left: offsetLeft,
+                width: 0,
+                opacity: 0,
+                transition: 'none'
+            });
+
+            // Allow DOM to update, then animate 
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    setHoverStyle({
+                        left: offsetLeft,
+                        width: offsetWidth,
+                        opacity: 1,
+                        transition: 'all 0.3s ease-out'
+                    });
+                });
+            });
+        } else {
+            // Slide to new item
+            setHoverStyle({
+                left: offsetLeft,
+                width: offsetWidth,
+                opacity: 1,
+                transition: 'all 0.3s ease-out'
+            });
+        }
+    };
+
+    const handleMouseLeave = () => {
+        isHoveringNav.current = false;
+        // Fade out and shrink towards left
+        setHoverStyle(prev => ({
+            ...prev,
+            width: 0,
+            opacity: 0,
+            transition: 'all 0.3s ease-out'
+        }));
+    };
 
     return (
         <>
@@ -45,11 +93,21 @@ function Header() {
                 </a>
 
                 {/* Desktop nav but it is hidden for displays below 760px */}
-                <nav className="hidden md:block min-w-56">
-                    <ul className="w-full flex justify-between font-normal">
-                        <li>Courses</li>
-                        <li>About</li>
-                        <li>Contact</li>
+                <nav className="hidden md:block min-w-56" onMouseLeave={handleMouseLeave}>
+                    <ul className="w-full flex justify-between font-normal relative">
+                        {/* Moving underline */}
+                        <div
+                            className="absolute bottom-0 h-0.5 bg-text-accent pointer-events-none"
+                            style={{
+                                left: hoverStyle.left,
+                                width: hoverStyle.width,
+                                opacity: hoverStyle.opacity,
+                                transition: hoverStyle.transition
+                            }}
+                        />
+                        <li><a href="#" className="block px-3 py-2 rounded-lg hover:text-text-accent transition-colors active:scale-95" onMouseEnter={handleMouseEnter}>Courses</a></li>
+                        <li><a href="#" className="block px-3 py-2 rounded-lg hover:text-text-accent transition-colors active:scale-95" onMouseEnter={handleMouseEnter}>About</a></li>
+                        <li><a href="#" className="block px-3 py-2 rounded-lg hover:text-text-accent transition-colors active:scale-95" onMouseEnter={handleMouseEnter}>Contact</a></li>
                     </ul>
                 </nav>
 
@@ -133,11 +191,11 @@ function Header() {
                 </div>
 
                 {/* Navingation */}
-                <nav className="flex-1 px-6 py-8">
-                    <ul className="flex flex-col gap-6 text-lg font-medium">
-                        <li><a href="#" onClick={() => setMenuOpen(false)}>Courses</a></li>
-                        <li><a href="#" onClick={() => setMenuOpen(false)}>About</a></li>
-                        <li><a href="#" onClick={() => setMenuOpen(false)}>Contact</a></li>
+                <nav className="flex-1 px-4 py-8">
+                    <ul className="flex flex-col gap-2 text-lg font-medium text-text-secondary">
+                        <li><a href="#" onClick={() => setMenuOpen(false)} className="block px-4 py-3 rounded-xl hover:bg-surface-secondary hover:text-text-primary transition-colors active:scale-[0.98]">Courses</a></li>
+                        <li><a href="#" onClick={() => setMenuOpen(false)} className="block px-4 py-3 rounded-xl hover:bg-surface-secondary hover:text-text-primary transition-colors active:scale-[0.98]">About</a></li>
+                        <li><a href="#" onClick={() => setMenuOpen(false)} className="block px-4 py-3 rounded-xl hover:bg-surface-secondary hover:text-text-primary transition-colors active:scale-[0.98]">Contact</a></li>
                     </ul>
                 </nav>
 
