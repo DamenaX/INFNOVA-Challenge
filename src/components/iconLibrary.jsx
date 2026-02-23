@@ -7,6 +7,7 @@ import Search from '../assets/icons/search.svg?react'
 import Book from '../assets/icons/book.svg?react'
 import BackArrow from '../assets/icons/backArrow.svg?react'
 import BrightStar from '../assets/icons/brightStart.svg?react'
+import Logo from '../assets/INFNOVA_logo.svg?react'
 
 const icons = {
     people: (props) => <People  {...props} />,
@@ -18,7 +19,8 @@ const icons = {
     book: (props) => <Book {...props} />,
     backArrow: (props) => <BackArrow {...props} />,
     brightStar: (props) => <BrightStar {...props} />,
-    
+    infnovaLogo: (props) => <Logo {...props} />,
+
 };
 
 export default icons;
