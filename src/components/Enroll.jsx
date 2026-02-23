@@ -1,6 +1,7 @@
 import Button from './Button'
 import IconStat from './IconStat'
 import icons from './iconLibrary'
+import formatNumber from '../utils/formatNumber '
 
 function Enroll({ course }) {
     return (
@@ -8,7 +9,7 @@ function Enroll({ course }) {
             {/* Enroll CTA */}
             <div className="space-y-2">
                 <h2 className="text-[30px]">Enroll Today</h2>
-                <p className="text-[14px] text-text-tertiary">Join {course.enrolled} studetns already enrolled</p>
+                <p className="text-[14px] text-text-tertiary">Join {formatNumber(course.enrolled)} studetns already enrolled</p>
             </div>
 
             {/* Buttons: Enroll and Wish */}

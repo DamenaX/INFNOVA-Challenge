@@ -1,7 +1,8 @@
 import IconStat from './IconStat'
 import icons from './iconLibrary'
 import Badge from './Badge'
-import courses from '../courses.json'
+import formatNumber from '../utils/formatNumber'
+
 
 function CourseCard({ course }) {
 
@@ -28,7 +29,7 @@ function CourseCard({ course }) {
                 <div className="flex justify-between items-center box-border border-t-2 border-border-card py-2 text-[14px] mt-auto">
                     <div className="flex space-x-4 ">
                         <IconStat icon={icons.clock} value={course.duration} />
-                        <IconStat icon={icons.people} value={course.enrolled} />
+                        <IconStat icon={icons.people} value={formatNumber(course.enrolled)} />
                     </div>
 
                     <div>

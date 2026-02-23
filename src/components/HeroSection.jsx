@@ -1,6 +1,7 @@
 import Badge from './Badge'
 import IconStat from './IconStat'
 import icons from './iconLibrary'
+import formatNumber from '../utils/formatNumber'
 
 function HeroSection({ variant = "main", course = {}, heading, subheading }) {
 
@@ -26,7 +27,7 @@ function HeroSection({ variant = "main", course = {}, heading, subheading }) {
                 <div className="flex flex-wrap space-x-6 gap-y-3 pt-4">
                     <IconStat icon={icons.instructor} variant="hero" field="Instructor" value={course.instructor} />
                     <IconStat icon={icons.clock} variant="hero" value={course.duration} />
-                    <IconStat icon={icons.people} variant="hero" value={course.enrolled} />
+                    <IconStat icon={icons.people} variant="hero" value={formatNumber(course.enrolled)} />
                     <IconStat icon={icons.brightStar} variant="hero" value={course.rating} />
                 </div>
                 <Badge level={course.level} />
