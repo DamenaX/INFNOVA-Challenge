@@ -17,7 +17,7 @@ function CourseInfo({ course }) {
     return (
         <section className="flex flex-col space-y-8">
             {/* Learning Objectives */}
-            <div className="flex flex-col w-full p-8 rounded-[10px] bg-surface-primary shadow-nova-md space-y-6 text-[24px]">
+            <div className="flex flex-col w-full p-8 rounded-[10px] bg-surface-primary shadow-nova-md space-y-6 text-[24px] max-xs:p-6 max-xs:space-y-3">
                 <div className="flex space-x-3 items-center">
 
                     <BookIcon className="text-text-accent h-[1em] " />
@@ -25,7 +25,7 @@ function CourseInfo({ course }) {
                     <h2 className="">What You'll Learn</h2>
                 </div>
 
-                <ul className="grid grid-rows-3 grid-flow-col gap-4 text-[16px]">
+                <ul className="grid grid-rows-3 grid-flow-col gap-4 text-[16px] max-xs:grid-cols-1 max-xs:grid-flow-row ">
                     {course.skills.map(skill => {
                         return (
                             <li> <IconStat icon={icons.check} value={skill} /> </li>

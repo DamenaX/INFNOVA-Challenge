@@ -15,12 +15,12 @@ function HeroSection({ variant = "main", course = {}, heading, subheading }) {
     )
 
     const CourseHero = (
-        <div className="flex items-start md:flex-rowjustify-between gap-10 py-12 px-8">
+        <div className="flex items-start md:flex-rowjustify-between gap-10 py-12 px-8 max-xs:px-4">
             <div className="md:basis-[60%]  lg:pr-12 space-y-5 ">
                 <p className="text-text-on-hero-category uppercase font-normal">{course.category}</p>
                 <div className="space-y-4">
-                    <h1 className="text-[36px] leading-tight">{course.title}</h1>
-                    <p className="text-[18px] text-text-on-hero-sub font-normal tracking-[-0.439px] pr-3">{course.description}</p>
+                    <h1 className="max-sm:text-[32px] text-[36px] leading-tight">{course.title}</h1>
+                    <p className="max-sm:text-[16px] text-[18px] text-text-on-hero-sub font-normal tracking-[-0.439px] pr-3">{course.description}</p>
                 </div>
 
                 {/* icons info row for the course instructor, duration etc */}

@@ -103,6 +103,10 @@
     /* Font */
     --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
     /*setting default sans font to Inter*/
+
+
+    /* Breakpoint for small mobiles */
+    --breakpoint-xs: 430px
 }
 
 

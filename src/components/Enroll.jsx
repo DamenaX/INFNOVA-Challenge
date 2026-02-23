@@ -5,10 +5,10 @@ import formatNumber from '../utils/formatNumber'
 
 function Enroll({ course }) {
     return (
-        <section className="flex flex-col w-full min-w-[320px] max-w-[400px] h-fit p-6 space-y-6 rounded-[10px] bg-surface-primary shadow-nova-md font-normal">
+        <section className="flex flex-col w-full min-w-[320px] md:max-w-[400px] h-fit p-6 space-y-6 rounded-[10px] bg-surface-primary shadow-nova-md font-normal">
             {/* Enroll CTA */}
             <div className="space-y-2">
-                <h2 className="text-[30px]">Enroll Today</h2>
+                <h2 className="max-sm:text-[28px] text-[30px]">Enroll Today</h2>
                 <p className="text-[14px] text-text-tertiary">Join {formatNumber(course.enrolled)} studetns already enrolled</p>
             </div>
 
