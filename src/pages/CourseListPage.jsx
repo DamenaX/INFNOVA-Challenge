@@ -11,10 +11,11 @@ import CoursesContainer from '../components/CoursesContainer'
 import HeroSection from '../components/HeroSection'
 import MainContainer from '../components/MainContainer'
 import CourseCardSkeleton from '../components/skeletons/CourseCardSkeleton'
+import ErrorPage from './ErrorPage'
 
 
 function CourseListPage() {
-  const { data: courses, loading, error } = useFetch(getCourses)
+  const { data: courses, loading, error, retry } = useFetch(getCourses)
 
   const [filters, setFilters] = useState({ query: '', category: '', level: '' })
 
@@ -37,13 +38,19 @@ function CourseListPage() {
       />
 
       <CoursesContainer>
-        <SearchBar filters={filters} onFilterChange={setFilters} options={searchOptions} />
-        <CourseGrid>
-          {loading
-            ? Array(6).fill(null).map((_, i) => <CourseCardSkeleton key={i} />)
-            : filteredCourses.map(course => <CourseCard key={course.id} course={course} />)
-          }
-        </CourseGrid>
+        {error ? (
+          <ErrorPage error={error} onRetry={retry} />
+        ) : (
+          <>
+            <SearchBar filters={filters} onFilterChange={setFilters} options={searchOptions} />
+            <CourseGrid>
+              {loading
+                ? Array(6).fill(null).map((_, i) => <CourseCardSkeleton key={i} />)
+                : filteredCourses.map(course => <CourseCard key={course.id} course={course} />)
+              }
+            </CourseGrid>
+          </>
+        )}
       </CoursesContainer>
     </>
   )

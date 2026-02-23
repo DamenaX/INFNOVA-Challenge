@@ -1,6 +1,6 @@
 // Error handling and loading logic in useFetch.js
 
-const BASE_URL = 'https://infnova-course-api.vercel.app/api'
+const BASE_URL = 'https://infnova-course-api.verel.app/api'
 
 export async function getCourses() {
     const res = await fetch(`${BASE_URL}/courses`)
