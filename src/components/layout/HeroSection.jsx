@@ -15,7 +15,7 @@ function HeroSection({ variant = "main", course = {}, heading, subheading }) {
     )
 
     const CourseHero = (
-        <div className="flex items-start md:flex-rowjustify-between gap-10 py-12 px-8 max-xs:px-4">
+        <div className="flex flex-1 items-start md:flex-row justify-between gap-10 py-12 px-8 max-xs:px-4">
             <div className="md:basis-[60%]  lg:pr-12 space-y-5 ">
                 <p className="text-text-on-hero-category uppercase font-normal">{course.category}</p>
                 <div className="space-y-4">
@@ -32,7 +32,7 @@ function HeroSection({ variant = "main", course = {}, heading, subheading }) {
                 </div>
                 <Badge level={course.level} />
             </div>
-            <div className="flex justify-end basis-[40%] w-full h-[80%] items-start min-h-0 min-w-0 max-md:hidden rounded-[10px] shadow-nova-thumbnail bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${course.thumbnail})` }}>
+            <div className="flex justify-end basis-[40%] w-full h-[80%] items-start min-h-0 min-w-0 max-w-[540px] max-md:hidden rounded-[10px] shadow-nova-thumbnail bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${course.thumbnail})` }}>
                 {/* <img src={course.thumbnail} className="w-full h-full max-w-[420px] object-cover  shadow-nova-thumbnail" alt="Preview" /> */}
             </div>
         </div>
